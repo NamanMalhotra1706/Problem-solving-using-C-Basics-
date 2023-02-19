@@ -39,18 +39,16 @@ int main(){
     
  	for(int st=0;st<n;st++)
  	{
-
  		for (int en = st+1; en<n ; en++)
  		{
  			 int currSum=INT_MIN;
  			  if(st>0)
- 			  currSum=csum[en]-csum[st-1];
+ 			  	currSum=csum[en]-csum[st-1];
  			 else
- 			 	currSum=csum[en];
-
+ 				currSum=csum[en];
 
  			  maxSum= currSum>maxSum ? currSum : maxSum;
  		}
  	}
-    printf("Max Sum is : %d ",maxSum);
+    printf("Max Sum is : %d",maxSum);
 }

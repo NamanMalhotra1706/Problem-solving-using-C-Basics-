@@ -11,17 +11,27 @@ void main() {
 
     }
 
-    int temp = arr[0];
-    arr[0] = arr[N-1];
+    // Here is the rotation 
+    // int temp = arr[0];
+    // arr[0] = arr[N-1];
 
-    for(int i=N-2;i>=1;i--){
-        arr[i+1]=arr[i];
-    }
+    // for(int i=N-2;i>=1;i--){
+    //     arr[i+1]=arr[i];
+    // }
 
-    arr[1]=temp;
-    printf("The cyclic Rotation of Array is:  ");
-    for(int i=0;i<N;i++){
+    // arr[1]=temp;
+    // printf("The cyclic Rotation of Array is:  ");
+    // for(int i=0;i<N;i++){
+    //     printf("%d ",arr[i]);
+    // }
+
+//2nd Approach
+
+    printf("%d ",arr[N-1]);
+    for(int i=0;i<N-1;i++){
         printf("%d ",arr[i]);
     }
+
+
 
 }
