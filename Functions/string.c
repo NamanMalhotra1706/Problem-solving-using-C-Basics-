@@ -56,10 +56,10 @@ int main(){
         
     // Duplicate charac in string
 
-    char str[50];
-    gets(str);
+    // char str[50];
+    // gets(str);
 
-    int n = strlen(str);
+    // int n = strlen(str);
 // 1st Method
     // int count=0;
     // for(int i=0;i<n;i++){
@@ -76,25 +76,44 @@ int main(){
     // }
 
 // 2nd Method 
-    int freq[26]={0};
-    for(int i=0;i<n;i++){
-        char ch=str[i];
-        int idx=ch-'a';
-        freq[idx]++;
-    }
-    for (int i = 0; i < 26; i++)
-      {
-            if (freq[i] > 1)
-           {
-                   printf (" %c is repeating", i + 97);
-                   printf (": %d times\n", freq[i]);
-            }
-      }
-      return 0;
+            // int freq[26]={0};
+            // for(int i=0;i<n;i++){
+            //     char ch=str[i];
+            //     int idx=ch-'a';
+            //     freq[idx]++;
+            // }
+            // for (int i = 0; i < 26; i++)
+            //   {
+            //         if (freq[i] > 1)
+            //        {
+            //                printf (" %c is repeating", i + 97);
+            //                printf (": %d times\n", freq[i]);
+            //         }
+            //   }
+            //   return 0;
 
-   
-    
+    // Remove duplicate from string
+
+            // printf("%d",(int)('a'));  //--> Type Casting
+                int i, j, k;
+                char str[30];
+                gets(str);
+                int length= strlen(str);
+                for(i=0; i<length; i++){                 
+                    char ch = str[i];
+                    for(j=i+1; j<length;){
+                    if(str[i] == str[j]){
+                        for(k=j; k<length; k++){
+                        str[k] = str[k+1];
+                        }
+                        length--; 
+                    } else {
+                        j++;
+                    }
+                    } 
+                }
+                printf("%s",str);
 
 
-
+                return 0;
 }
