@@ -1,0 +1,3 @@
+Hello File Handler
+I am Naman Malhotra
+reading this data by fetching it from File
